@@ -1,17 +1,16 @@
 fn main() {
-    let season: &str = "fall";
+    let number: i8 = 8;
 
-    if season == "summer" {
-        println!("summer")
-    } else if season == "winter" {
-        println!("winter")
-    } else {
-        println!("its raining")
-    }
+    match number {
+        2 | 4 | 6 | 8 => {
+            println!("{number} is even")
+        }
 
-    match season {
-        "summer" => println!("summer"),
-        "winter" => println!("winter"),
-        _ => println!("lots of rain"),
+        1 | 3 | 5 | 7 => {
+            println!("{number} is odd")
+        }
+        _ => {
+            println!("unknown for now")
+        }
     }
 }
