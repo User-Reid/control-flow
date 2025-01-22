@@ -1,16 +1,13 @@
 fn main() {
-    let number: i8 = 8;
+    let mut seconds: i8 = 20;
 
-    match number {
-        2 | 4 | 6 | 8 => {
-            println!("{number} is even")
+    loop {
+        if seconds == 0 {
+            println!("BLASTOFF!🚀");
+            break;
         }
 
-        1 | 3 | 5 | 7 => {
-            println!("{number} is odd")
-        }
-        _ => {
-            println!("unknown for now")
-        }
+        println!("{seconds} seconds until blastoff..");
+        seconds -= 1;
     }
 }
