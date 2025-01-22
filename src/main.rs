@@ -1,10 +1,17 @@
 fn main() {
-    let evaluation: bool = true;
+    let season: &str = "fall";
 
-    let value: i8 = match evaluation {
-        true => 20,
-        false => 40,
-    };
+    if season == "summer" {
+        println!("summer")
+    } else if season == "winter" {
+        println!("winter")
+    } else {
+        println!("its raining")
+    }
 
-    println!("{value}");
+    match season {
+        "summer" => println!("summer"),
+        "winter" => println!("winter"),
+        _ => println!("lots of rain"),
+    }
 }
